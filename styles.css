@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Outfit-Light';
+  src: url('./assets/fonts/outfit/static/Outfit-Light.ttf');
+}
+
+@font-face {
+  font-family: 'YoungSerif-Regular';
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;    
+}
+
+body {
+  font-family: 'Outfit-Light';
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(30, 54%, 90%);
+}
+
+strong {
+  color: hsl(30, 10%, 34%);
+}
+
+h1 {
+  font-family: 'Outfit-YoungSerif-Regular';
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-family: 'Outfit-YoungSerif-Regular';
+  color: hsl(14, 45%, 36%);
+  font-size: 1.6rem;
+}
+
+h5 {
+  color: hsl(332, 51%, 32%);
+  font-size: 1.1rem;
+}
+
+ul, ol {
+  padding-left: 29px;
+}
+
+ul > li, ol > li {
+  padding: 8px 0 0 8px;
+}
+
+ul > li::marker {
+  color: hsl(332, 51%, 32%);
+}
+
+ol > li::marker {
+  color: hsl(14, 45%, 36%);
+  font-weight: bolder;
+}
+
+hr {
+  margin: 20px 20px;
+  border: 1px solid hsl(30, 18%, 87%);
+}
+
+table {
+  width: 100%;
+  margin: 10px 0;
+  text-align: left;
+}
+
+table tr:last-child {
+  border: none;
+}
+
+td, th {
+  padding: 10px 0 10px 25px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+th {
+  color: hsl(14, 45%, 36%);
+  font-weight: bolder;
+}
+
+section {
+  margin: 25px;
+}
+
+.recipe-container {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.image-recipe {
+  width: 100%;
+}  
+
+.text-recipe {
+  margin-top: 15px;
+}
+
+.preparation-container {
+  padding: 20px;
+  background-color: hsl(330, 100%, 98%);
+}
+
+.text-nutrition {
+  margin-top: 15px;
+}
+
+.no-border {
+  border: none;
+}
+
+.attribution {
+  display: none;
+  margin-top: 15px;
+  font-size: 18px;
+  text-align: center;
+  color: hsl(14, 45%, 36%);
+}
+
+.attribution a {
+  font-weight: bold;
+  color: hsl(14, 45%, 36%);
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    padding: 40px;
+  }  
+
+  .recipe-container {
+    width: 700px;
+    border-radius: 20px;
+  }  
+
+  .image-recipe-container {
+    margin: 25px 25px;
+  }
+
+  .image-recipe {
+    border-radius: 10px;
+  }
+
+  .attribution {
+    display: block;
+  }
+}
