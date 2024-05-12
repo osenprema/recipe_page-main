@@ -12,64 +12,88 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;    
+}  
+
+/* 360 × 640 (small mobile) */
+html {
+  font-family: 'Outfit-Light';
+  font-size: 16px;
 }
 
 body {
-  font-family: 'Outfit-Light';
-  font-size: 16px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: hsl(30, 54%, 90%);
-}
+}  
 
-strong {
-  color: hsl(30, 10%, 34%);
+img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 h1 {
-  font-family: 'Outfit-YoungSerif-Regular';
-  font-size: 2.8rem;
+  font-family: 'YoungSerif-Regular';
+  margin-top: 26vh;
+  font-size: 2.1rem;
+  line-height: 1;
+  color: hsl(24, 5%, 18%);
+}    
+
+p {
+  font-family: 'YoungSerif-Regular';
+  font-size: 0.9rem;
+  margin-top: 3vh;
+  color: hsl(30, 10%, 34%);
 }
+
+section {
+  margin-top: 4vh;
+}  
 
 h2 {
   color: hsl(332, 51%, 32%);
   font-size: 1.1rem;
-}
+}    
 
 h3 {
-  font-family: 'Outfit-YoungSerif-Regular';
   color: hsl(14, 45%, 36%);
   font-size: 1.6rem;
-}  
+}      
+
+strong {
+  color: hsl(30, 10%, 34%);
+}    
 
 ul, ol {
   padding-left: 29px;
-}
+}    
 
 ul > li, ol > li {
   padding: 8px 0 0 8px;
-}
+}    
 
 ul > li::marker {
   color: hsl(332, 51%, 32%);
-}
+}    
 
 ol > li::marker {
   color: hsl(14, 45%, 36%);
-  font-weight: bolder;
-}
+  font-weight: 700;
+}    
 
 hr {
-  margin: 20px 20px;
+  margin-top: 4vh;
   border: 1px solid hsl(30, 18%, 87%);
-}
+}    
 
 table {
   width: 100%;
-  margin: 10px 0;
+  margin-top: 3vh;
   text-align: left;
-}
+}    
 
 table td {
   padding: 10px 0 10px 25px;
@@ -79,44 +103,30 @@ table td {
 table td:last-child {
   color: hsl(14, 45%, 36%);
   font-weight: bold;
-}
+}    
 
-section {
-  margin: 25px;
-}
-
-.recipe-container {
-  min-height: 100vh;
+.recipe {
+  padding: 5vh;
   background-color: hsl(0, 0%, 100%);
-}
-
-.image-recipe {
-  width: 100%;
+  position: relative;
 }  
 
-.text-recipe {
-  margin-top: 15px;
-}
-
-.preparation-container {
+.recipe__preparation {
   padding: 20px;
+  border-radius: 10px;
   background-color: hsl(330, 100%, 98%);
 }
 
-.text-nutrition {
-  margin-top: 15px;
-}
-
-.no-border {
+.--no-border {
   border: none;
 }
 
 .attribution {
-  display: none;
-  margin-top: 15px;
-  font-size: 18px;
+  font-size: 15px;
+  margin-bottom: 15px;
   text-align: center;
   color: hsl(14, 45%, 36%);
+  display: none;
 }
 
 .attribution a {
@@ -125,25 +135,122 @@ section {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 600px) {
-  body {
-    padding: 40px;
-  }  
+/* 375 × 667 (medium mobile) */
+/* No changes required */
 
-  .recipe-container {
-    width: 700px;
-    border-radius: 20px;
-  }  
-
-  .image-recipe-container {
-    margin: 25px 25px;
+/* 720 × 1280 (large mobile) */
+@media screen and (min-width: 720px) {
+  h1 {
+    font-size: 4.1rem;
+  }    
+  
+  p, ul, ol, table {
+    font-size: 1.6rem;
   }
+  
+  h2 {
+    font-size: 2.5rem;
+  }    
+  
+  h3 {
+    font-size: 3rem;
+  }      
+}
 
-  .image-recipe {
-    border-radius: 10px;
+/* Mobiles in landscape position  */
+@media screen and (orientation: landscape) {
+  h1 {
+    margin-top: 83vh;
+  }
+}
+
+/* 1366 × 768 (medium laptop) */
+@media screen and (min-width: 1366px) {
+  img {
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  h1 {
+    margin-top: 5vh;
+    font-size: 2.8rem;
+  }    
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  ul, ol, table {
+    font-size: 1.2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }    
+  
+  h3 {
+    font-size: 2rem;
+  }      
+  
+  .recipe {
+    width: 60%;
+    height: 80%;
+    margin: 17vh auto;
+    border-radius: 25px;
+  }
+  
+  .attribution {
+    font-size: 30px;
+    display: block;
+  }
+}
+
+/* 1440 × 900 (medium desktop) */
+@media screen and (min-width: 1440px) {
+  h1 {
+    font-size: 3rem;
+  }    
+  
+  p {
+    font-size: 1.1rem;
+  }
+  
+  ul, ol, table {
+    font-size: 1.3rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }    
+  
+  h3 {
+    font-size: 2.1rem;
+  }      
+}
+
+/* 1920 × 1080 (large desktop) */
+@media screen and (min-width: 1920px) {
+  h1 {
+    font-size: 4rem;
+  }    
+  
+  p {
+    font-size: 1.6rem;
+  }
+  
+  ul, ol, table {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }    
+  
+  h3 {
+    font-size: 3rem;
   }
 
   .attribution {
-    display: block;
+    font-size: 40px;
   }
 }
