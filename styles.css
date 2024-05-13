@@ -36,9 +36,9 @@ img {
 
 h1 {
   font-family: 'YoungSerif-Regular';
-  margin-top: 26vh;
-  font-size: 2.1rem;
+  font-size: 2rem;
   line-height: 1;
+  margin-top: 24vh;
   color: hsl(24, 5%, 18%);
 }    
 
@@ -54,13 +54,13 @@ section {
 }  
 
 h2 {
-  color: hsl(332, 51%, 32%);
   font-size: 1.1rem;
+  color: hsl(332, 51%, 32%);
 }    
 
 h3 {
-  color: hsl(14, 45%, 36%);
   font-size: 1.6rem;
+  color: hsl(14, 45%, 36%);
 }      
 
 strong {
@@ -80,8 +80,8 @@ ul > li::marker {
 }    
 
 ol > li::marker {
-  color: hsl(14, 45%, 36%);
   font-weight: 700;
+  color: hsl(14, 45%, 36%);
 }    
 
 hr {
@@ -101,8 +101,8 @@ table td {
 }
 
 table td:last-child {
-  color: hsl(14, 45%, 36%);
   font-weight: bold;
+  color: hsl(14, 45%, 36%);
 }    
 
 .recipe {
@@ -123,16 +123,16 @@ table td:last-child {
 
 .attribution {
   font-size: 15px;
-  margin-bottom: 15px;
   text-align: center;
+  margin-bottom: 15px;
   color: hsl(14, 45%, 36%);
   display: none;
 }
 
 .attribution a {
   font-weight: bold;
-  color: hsl(14, 45%, 36%);
   text-decoration: none;
+  color: hsl(14, 45%, 36%);
 }
 
 /* 375 × 667 (medium mobile) */
@@ -141,7 +141,7 @@ table td:last-child {
 /* 720 × 1280 (large mobile) */
 @media screen and (min-width: 720px) {
   h1 {
-    font-size: 4.1rem;
+    font-size: 3.5rem;
   }    
   
   p, ul, ol, table {
@@ -158,11 +158,11 @@ table td:last-child {
 }
 
 /* Mobiles in landscape position  */
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 1280px) and (orientation: landscape) {
   h1 {
     margin-top: 83vh;
-  }
-}
+  }  
+}  
 
 /* 1366 × 768 (medium laptop) */
 @media screen and (min-width: 1366px) {
@@ -172,8 +172,8 @@ table td:last-child {
   }
   
   h1 {
-    margin-top: 5vh;
-    font-size: 2.8rem;
+    font-size: 2.9rem;
+    margin-top: 4.5vh;
   }    
   
   p {
@@ -208,7 +208,8 @@ table td:last-child {
 /* 1440 × 900 (medium desktop) */
 @media screen and (min-width: 1440px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.1rem;
+    margin-top: 3.5vh;
   }    
   
   p {
@@ -231,7 +232,8 @@ table td:last-child {
 /* 1920 × 1080 (large desktop) */
 @media screen and (min-width: 1920px) {
   h1 {
-    font-size: 4rem;
+    margin-top: 4.5vh;
+    font-size: 4.2rem;
   }    
   
   p {
@@ -252,5 +254,19 @@ table td:last-child {
 
   .attribution {
     font-size: 40px;
+  }
+}
+
+/* Desktops in portrait position  */
+@media screen and (min-width: 900px) and (orientation: portrait) {
+  h1 {
+    margin-top: 27vh;
+  }
+}
+  
+@media screen and (min-width: 1080px) and (orientation: portrait) {
+  h1 {
+    font-size: 4.5rem;
+    margin-top: 24vh;
   }
 }
